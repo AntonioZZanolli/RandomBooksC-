@@ -29,12 +29,14 @@ namespace RandomBooks.ContentContext
         {
             foreach (var Book in this.Books)
             {
+                Console.WriteLine("\n");
                 Console.WriteLine("---------------");
                 Console.WriteLine(Books.IndexOf(Book));
                 Console.WriteLine(Book.Title);
                 Console.WriteLine(Book.Pages);
                 Console.WriteLine(Book.Theme);
                 Console.WriteLine("---------------");
+                Console.WriteLine("\n");
             }
         }
 
@@ -43,7 +45,11 @@ namespace RandomBooks.ContentContext
             Random rand = new Random(DateTime.Now.Millisecond);
 
             var resultado = Books[rand.Next(Books.Count)].Title;
-            Console.WriteLine(resultado);
+            Console.WriteLine('\n');
+            Console.WriteLine("**************");
+            Console.WriteLine($"O seu livro será o {resultado}");
+            Console.WriteLine("**************");
+            Console.WriteLine('\n');
         }
 
 
